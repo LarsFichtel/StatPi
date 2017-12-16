@@ -13,7 +13,7 @@ import (
 
 func GetOnlineWeather(city string) (error) {
 
-	apikey := "ef765e2751e78ca3a1428fda9eb24cd5"
+	apikey := ""
 	url := fmt.Sprintf("http://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=%s", city, apikey)
 
 	httpclient := &http.Client{
