@@ -41,11 +41,11 @@ func GetOnlineWeather(city string) (error) {
 		return  err
 	}
 
-    temp :=(data.Temp -32) / 1.8
-    fmt.Print(temp)
+    	temp :=(data.Temp -32) / 1.8
+    	fmt.Print(temp)
 
 	writedata := core.New(temp, data.Humidity, int64(data.Dt), "online")
-    err = dataWriter.WriteData(writedata, "data.csv")
+    	err = dataWriter.WriteData(writedata, "data.csv")
 	if err != nil {
 		return err
 	}
