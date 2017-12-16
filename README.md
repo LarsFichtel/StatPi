@@ -8,5 +8,5 @@ The values are safed into .csv-files.
 ### StatPiConverter (R)
 To plot .svg-files from the given data, R-scripts are used. For each case, another script is written, that they can be executed by a cron-deamon.
 
-### StatPiProvider
+### StatPiProvider (golang)
 The StatPiProvider is webservice written in go. At this point in time, it simply returns .html-file, which display the .svg-files
