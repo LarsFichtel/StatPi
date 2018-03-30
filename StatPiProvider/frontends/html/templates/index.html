@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>StatPi by Lars Fichtel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+		<a class="navbar-brand" href="#">Logo</a>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="online.html">Online</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="local.html">Local</a>
+			</li>
+		</ul>
+
+	</nav>
+
+	<div class="jumbotron text-center" style="background-color:transparent">
+		<h1>StatPi by Lars Fichtel</h1>
+		<p>StatPi is a simple project running on the RaspberryPi with the RaspberryPi SenseHat. It is part of a student research paper and consists of 3 main Parts:</p> 
+		<dl>
+			<dt>StatPiCollector (golang)</dt>
+			<dd>Temperature and humidity collected from the SenseHat. Additionally values are collected from an online weatherAPI(e.g. openweathermap). The values are safed into .csv-files.</dd>
+			<dt>StatPiConverter (R)</dt>
+			<dd>To plot .svg-files from the given data, R-scripts are used. For each case, another script is written, that they can be executed by a cron-deamon.</dd>
+			<dt>StatPiProvider (golang)</dt>
+			<dd>The StatPiProvider is webservice written in go. At this point in time, it simply returns .html-file, which display the .svg-files.</dd>
+			<dd> </dd>
+			<dd> </dd>
+			<dt>The different statical analyses can be accessed through the navbar on top or the following links:</dt>
+			<dt><a href="online.html">online temperatures and humidity</a></dt>
+			<dt><a href="temp24.html">temperatures over the last 24h</a></dt>
+			<dt><a href="local.html">local temperatures and humidity</a></dt>
+		</dl>
+				
+	</div>
+</body>
+
+</html>
